@@ -15,9 +15,20 @@ set pagination off
 
 
 define cls
-shell clear
-dashboard
+	shell clear
+	dashboard
 end
+
+define atnt
+	set disassembly-flavor att
+end 
+
+
+define intel
+	set disassembly-flavor intel
+end 
+
+
 
 
 # ================= Commands to put memory in the watch ==================
