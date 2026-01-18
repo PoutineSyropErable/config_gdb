@@ -5,6 +5,7 @@
 # add-auto-load-safe-path /home/francois/Documents/zzz__PersonalProjects/MapleKernel/
 # add-auto-load-safe-path /home/francois/Documents/zzz__PersonalProjects/MapleKernel/src
 add-auto-load-safe-path /home/francois/Documents/zzz__PersonalProjects/MapleKernel/src/.gdbinit
+add-auto-load-safe-path /home/francois/Documents/zzz__PersonalProjects/MapleKernel/src64_hack/.gdbinit
 
 
 define rk32
@@ -15,6 +16,13 @@ end
 define rk64
 	set architecture i386:x86-64
 	target remote :1234 
+end
+
+
+define rk64r
+	target remote :1234 
+	break _start
+	activate_dashboard
 end
 
 
